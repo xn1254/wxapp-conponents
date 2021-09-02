@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "ci-icon": "../Icon/index"
+    }
+}

@@ -1,0 +1,37 @@
+<view class="ci-menu">
+    <view wx:if="{{level === 1}}" class="ci-menu-wrapper-1">
+        <scroll-view style="height: {{height}}px" class="ci-multiselect-wrapper" scroll-y>
+            <i-radio-group wx:if="{{!multiSelect}}" current="{{current}}" bindchange="handleFruitChange">
+                <i-radio disabled="{{item.disabled}}" wx:for="{{data}}" position="right" wx:key="{{index}}" value="{{item.label}}"></i-radio>
+            </i-radio-group>
+            <i-checkbox-group wx:if="{{multiSelect}}" current="{{multiSelectCurrent}}" bindchange="handleMultiSelectCurrent">
+                <i-checkbox disabled="{{item.disabled}}" wx:for="{{data}}" position="right" wx:key="{{index}}" value="{{item.label}}"></i-checkbox>
+            </i-checkbox-group>
+        </scroll-view>
+        <view wx:if="{{multiSelect}}" class="ci-multiselect-wrapper">
+            <button bindtap="cancel" class="ci-cancel ci-button">取消</button>
+            <button bindtap="confirm" class="ci-confirm ci-button">确认</button>
+        </view>
+    </view>
+    <view wx:if="{{level === 2}}" class="ci-menu-wrapper-2">
+        <view style="height: {{height}}px" class="ci-menu-wrapper-scroll">
+            <scroll-view class="ci-multiselect-wrapper-left" scroll-y>
+                <view bindtap="changeItem" data-data="{{item}}" wx:key="{{index}}" wx:for="{{data}}" class="ci-item-wrapper">
+                    {{item.label}}
+                </view>
+            </scroll-view>
+            <scroll-view class="ci-multiselect-wrapper-right" scroll-y>
+                <i-radio-group wx:if="{{!multiSelect}}" current="{{current}}" bindchange="handleFruitChange">
+                    <i-radio disabled="{{item.disabled}}" checked="{{item.checked}}" wx:for="{{multiselect_data}}" position="right" wx:key="{{index}}" value="{{item.label}}"></i-radio>
+                </i-radio-group>
+                <i-checkbox-group wx:if="{{multiSelect}}" current="{{multiSelectCurrent}}" bindchange="handleMultiSelectCurrent">
+                    <i-checkbox disabled="{{item.disabled}}" checked="{{item.checked}}" wx:for="{{multiselect_data}}" position="right" wx:key="{{index}}" value="{{item.label}}"></i-checkbox>
+                </i-checkbox-group>
+            </scroll-view>
+        </view>
+        <view wx:if="{{multiSelect}}" class="ci-multiselect-wrapper">
+            <button bindtap="cancel" class="ci-cancel ci-button">取消</button>
+            <button bindtap="confirm" class="ci-confirm ci-button">确认</button>
+        </view>
+    </view> 
+</view>

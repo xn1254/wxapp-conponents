@@ -1,0 +1,10 @@
+<view class="ci-card__ft">
+    <view wx:if="{{content !== ''}}">{{content}}</view>
+    <view wx:if="{{content === ''}}">
+        <slot name="content"></slot>
+    </view>
+    <view wx:if="{{extra !== ''}}">{{extra}}</view>
+    <view wx:if="{{extra === ''}}">
+        <slot name="extra"></slot>
+    </view>
+</view>

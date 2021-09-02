@@ -1,0 +1,27 @@
+.ci-menu-wrapper-scroll{
+    display: flex;
+    flex-direction: row;
+}
+.ci-item-wrapper{
+    padding: 24rpx 30rpx;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.ci-multiselect-wrapper-left, .ci-multiselect-wrapper-right{
+    flex: 1
+}
+.ci-multiselect-wrapper{
+    display: flex;
+    flex-direction: row
+}
+.ci-button{
+    flex: 1;
+    border-radius: 0
+}
+.ci-confirm{
+     color: #ffffff;
+     background: #108ee9
+}
+.ci-confirm:active{
+    opacity: 0.7;
+}

@@ -1,0 +1,14 @@
+<view class="ci-card__hd">
+    <view class="ci-card__content">
+        <image wx:if="{{thumb !== ''}}" class="ci-card__thumb" src="{{ thumb }}" mode="aspectFit"/>
+        <view wx:if="{{thumb === ''}}" class="ci-card__thumb">
+            <slot name="thumb"></slot>
+        </view>
+        <text wx:if="{{title !== ''}}">{{ title }}</text>
+        <slot wx:if="{{title === ''}}" name="title"></slot>
+    </view>
+    <view wx:if="{{ extra === ''}}" class="ci-card__extra">
+        <slot name="extra"></slot>
+    </view>
+    <view wx:if="{{ extra !== ''}}" class="ci-card__extra">{{extra}}</view>
+</view>

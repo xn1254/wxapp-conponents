@@ -1,0 +1,14 @@
+<view class="ci-navbar-wrapper {{mode ? 'ci-navbar-wrapper-' + mode : 'ci-navbar-wrapper-light'}}">
+    <view class="ci-navbar-left ci-content" bindtap="clickLeft">
+        <view>
+            <slot wx:if="{{icon}}" name="leftContent"></slot>
+        </view>
+        <text wx:if="{{!icon}}" class="ci-default-text">Back</text>
+    </view>
+    <view class="ci-navbar-content ci-content {{mode ? 'ci-navbar-content-' + mode : ''}}">
+        <slot></slot>    
+    </view>
+    <view class="ci-navbar-right ci-content">
+        <slot name="rightContent"></slot>    
+    </view>
+</view>

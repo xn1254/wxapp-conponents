@@ -1,0 +1,20 @@
+<view class="ci-popover__container">
+    <ci-animation-group wux-class="ci-popover" in="{{ popoverVisible }}" class-names="wux-animate--fadeIn" bind:enter="onEnter">
+        <view class="ci-class ci-popover {{ placement ? 'ci-popover--placement-' + placement : '' }}" style="{{ popoverStyle }}">
+            <view class="ci-popover__content">
+                <view class="ci-popover__arrow"></view>
+                <view class="ci-popover__inner">
+                    <view>
+                        <view class="ci-popover__inner-content">
+                            <slot name="overlay"></slot>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </ci-animation-group>
+</view>
+<view class="ci-popover__element" bindtap="onClick">
+    <slot></slot>
+</view>
+<view bindtap="hideMask" class="ci-popover__mask {{mask ? 'ci-popover__container_mask' : ''}} {{showMask ? 'ci-popover__container_show_mask' : ''}}"></view>

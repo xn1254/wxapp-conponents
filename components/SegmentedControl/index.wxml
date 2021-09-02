@@ -1,0 +1,5 @@
+<view style="color: {{tintColor}}; border-color:{{tintColor}}; {{customStyle}}" class="ci-segmented-control-wrapper {{disabled ? 'ci-segmented-control-disabled' : ''}}">
+    <view style="background: {{index === selectedIndex ? tintColor : ''}}" bindtap="checkedItem" id="{{index}}" wx:for="{{values}}" wx:key="{{index}}" class="ci-segmented-control {{index === selectedIndex ? 'ci-segmented-control-checked' : ''}}">
+        {{item}}
+    </view>
+</view>

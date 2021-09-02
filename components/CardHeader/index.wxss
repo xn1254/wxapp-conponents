@@ -1,0 +1,32 @@
+.ci-card__hd {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 34rpx;
+    padding: 18rpx 30rpx;
+    -ms-flex-align: center;
+  }
+  .ci-card__content {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+  }
+  .ci-card__thumb {
+    width: 64rpx;
+    height: 64rpx;
+    position: relative;
+    margin-right: 10rpx;
+    overflow: hidden;
+  }
+  .ci-card__extra {
+    -ms-flex: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 34rpx;
+    color: #888;
+  }

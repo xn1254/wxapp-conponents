@@ -1,0 +1,18 @@
+.ci-white-space-wrapper{
+    width: 100%;
+}
+.ci-white-space-wrapper-xs{
+    height: 10rpx;
+}
+.ci-white-space-wrapper-sm{
+    height: 20rpx;
+}
+.ci-white-space-wrapper-md{
+    height: 30rpx;
+}
+.ci-white-space-wrapper-lg{
+    height: 40rpx
+}
+.ci-white-space-wrapper-xl{
+    height: 50rpx;
+}

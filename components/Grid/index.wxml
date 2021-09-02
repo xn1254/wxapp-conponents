@@ -1,0 +1,26 @@
+<view wx:if="{{!isCarousel}}" class="ci-class ci-grid__content {{!hasLine ? '' : 'ci-grid--bordered'}}">
+    <view class="ci-grid__inner {{!hasLine ? '' : 'ci-grid__inner_border'}}" style="width: {{gridWidth}}; height: {{gridWidth}}" wx:for="{{data}}" wx:key="{{index}}" bindtap="onTap">
+        <view class="ci-grid__hd">
+            <image mode="{{square ? 'widthFix' : 'scaleToFill'}}" class="ci-grid__thumb not-square-grid" src="{{ item.icon }}"/>
+        </view>
+        <view class="ci-grid__bd">
+            <view class="ci-grid__label">{{ item.text }}</view>
+        </view>
+    </view>
+</view>
+<view wx:else class="ci-class ci-grid__content {{!hasLine ? '' : 'ci-grid--bordered'}}">
+    <swiper style="height: {{swiperHeight}}" indicator-dots="{{indicatorDots}}">
+        <block wx:for="{{pageArr}}" wx:key="{{index}}">
+            <swiper-item>
+                <view class="ci-grid__inner {{!hasLine ? '' : 'ci-grid__inner_border'}}" style="width: {{gridWidth}}; height: {{gridHeight}}" wx:for="{{item}}" wx:key="{{index}}" bindtap="onTap">
+                    <view class="ci-grid__hd">
+                        <image mode="{{square ? 'widthFix' : 'scaleToFill'}}" class="ci-grid__thumb not-square-grid" src="{{ item.icon }}"/>
+                    </view>
+                    <view class="ci-grid__bd">
+                        <view class="ci-grid__label">{{ item.text }}</view>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

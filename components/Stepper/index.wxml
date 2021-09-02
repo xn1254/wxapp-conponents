@@ -1,0 +1,9 @@
+<view class="ci-stepper-wrapper {{disabled ? 'ci-disabled' : ''}}">
+    <view class="ci-delete-button ci-button" bindtap="deleteCount">
+        <view class="ci-delete-icon"></view>
+    </view>
+    <input disabled="{{disabled || readOnly}}" bindblur="changeValue" type="number" value="{{currentValue ? currentValue : defaultValue}}" class="ci-number" />
+    <view class="ci-add-button ci-button" bindtap="addCount">
+        <Icon class="ci-add-icon" type="add"/>
+    </view>
+</view>

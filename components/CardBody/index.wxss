@@ -1,0 +1,19 @@
+.ci-card__bd {
+    position: relative;
+    padding: 30rpx 30rpx 12rpx;
+    font-size: 30rpx;
+    color: #333;
+    min-height: 80rpx;
+  }
+  .ci-card__bd:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 2rpx;
+    border-top: 2rpx solid #d9d9d9;
+    color: #d9d9d9;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+  }

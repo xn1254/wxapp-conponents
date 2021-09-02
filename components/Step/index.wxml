@@ -1,0 +1,28 @@
+<view class="ci-class ci-step {{ direction === 'vertical' ? 'ci-step--vertical' : 'ci-step--horizontal' }} {{ className }}" style="width: {{ width }}">
+    <view class="ci-step__hd">
+        <view class="ci-step__icon {{size === 'small' ? 'ci-step__icon_small' : ''}}" wx:if="{{ status === 'process' && !icon }}">
+            <text class="" selectable="false" space="false" decode="false">{{ index + 1 }}</text>
+        </view>
+        <view class="ci-step__icon {{size === 'small' ? 'ci-step__icon_small' : ''}}" wx:elif="{{ status === 'finish' && !icon }}">
+            <ci-icon ci-class="ci-step__thumb" type="right" size="{{size === 'large' ? 22 : 18}}"></ci-icon>
+        </view>
+        <view wx:elif="{{ status === 'wait' && !icon }}">
+            <ci-icon color="#ccc" ci-class="ci-step__thumb" type="more" size="{{size === 'large' ? 22 : 18}}"></ci-icon>
+        </view>
+        <view class="ci-step__icon {{size === 'small' ? 'ci-step__icon_small' : ''}}" wx:elif="{{ status === 'error' && !icon }}">
+            <ci-icon ci-class="ci-step__thumb" type="close" size="{{size === 'large' ? 22 : 18}}"></ci-icon>
+        </view>
+        <view class="ci-step__icon {{size === 'small' ? 'ci-step__icon_small' : ''}}" wx:else>
+            <ci-icon ci-class="ci-step__thumb" type="{{icon}}" size="{{size === 'large' ? 22 : 18}}"></ci-icon>
+        </view>
+    </view>
+    <view class="ci-step__bd">
+        <view class="ci-step__title">
+            {{ title }}
+        </view>
+        <view class="ci-step__content">
+            {{ description }}
+        </view>
+    </view>
+    <view class="ci-step__ft" wx:if="{{ index !== length - 1 }}"></view>
+</view>

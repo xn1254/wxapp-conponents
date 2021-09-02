@@ -1,0 +1,17 @@
+.ci-popover-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rpx 32rpx;
+    border-bottom: 1rpx solid #ccc
+}
+.ci-popover-item-icon{
+    display: flex;
+    align-items: center
+}
+.ci-popover-item:active{
+    background-color: rgb(211, 211, 211)
+}
+.ci-popover-item-disabled{
+    background-color: rgb(211, 211, 211)
+}

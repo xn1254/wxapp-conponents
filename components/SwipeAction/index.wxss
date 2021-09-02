@@ -1,0 +1,43 @@
+.ci-swipe {
+    overflow: hidden;
+    position: relative;
+  }
+  .ci-swipe-content {
+    position: relative;
+    background-color: #fff;
+  }
+  .ci-swipe .ci-swipe-content,
+  .ci-swipe .ci-swipe-actions {
+    transition: all 250ms;
+  }
+  .ci-swipe-swiping .ci-swipe-content,
+  .ci-swipe-swiping .ci-swipe-actions {
+    transition: none;
+  }
+  .ci-swipe-swiping .ci-list-item-active {
+    background-color: #FFF;
+  }
+  .ci-swipe-actions {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ci-swipe-actions-left {
+    left: 0;
+  }
+  .ci-swipe-actions-right {
+    right: 0;
+  }
+  .ci-swipe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .ci-swipe-btn-text {
+    padding: 0 20rpx;
+  }
+  

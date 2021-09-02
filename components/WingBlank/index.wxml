@@ -1,0 +1,3 @@
+ <view class="{{size ? 'ci-wing-blank-wrapper-' + size : 'ci-wing-blank-wrapper-lg'}}">
+     <slot></slot>
+ </view>

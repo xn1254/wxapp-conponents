@@ -1,0 +1,39 @@
+.ci-stepper-wrapper{
+    width: 100%;
+    min-height: 200rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.ci-disabled{
+    opacity: 0.3;
+}
+.ci-number{
+    text-align: center;
+    font-size: 16px
+}
+.ci-button{
+    width: 64rpx;
+    height: 64rpx;
+    border: 2rpx solid #000;
+    border-radius: 10rpx
+}
+.ci-button:active{
+    background: #cccccc
+}
+.ci-delete-button{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.ci-delete-icon{
+    width: 28rpx;
+    height: 2rpx;
+    background: #000000
+}
+.ci-add-icon{
+    font-size: 16px
+}
+.ci-add-button{
+    text-align: center;
+}

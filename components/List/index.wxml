@@ -1,0 +1,13 @@
+<view class="ci-list-wrapper">
+    <slot name="renderHeader"></slot>
+    <view wx:if="{{renderHeader}}" class="ci-renderHeader-text">
+        {{renderHeader}}
+    </view>
+    <view class="ci-content-wrapper">
+        <slot></slot>
+    </view>
+    <view wx:if="{{renderFooter}}" class="ci-renderHeader-text">
+        {{renderFooter}}
+    </view>
+    <slot name="renderFooter"></slot>
+</view>

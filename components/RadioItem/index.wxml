@@ -1,0 +1,6 @@
+<view>
+    <ListItem hideActive bindonClick="checkedItem" extra="{{extra}}" arrow="{{arrow}}" align="{{align}}" multipleLine="{{multipleLine}}" wrap="{{wrap}}">
+        <menu-radio bindchange="checkedItem" disabled="{{disabled}}" checked="{{checked ? checked : defaultChecked}}" value="{{Title}}"></menu-radio>
+        <ListItemBrief>{{subtitle}}</ListItemBrief>
+    </ListItem>
+</view>

@@ -1,0 +1,2 @@
+<view class="ci-white-space-wrapper {{size ? 'ci-white-space-wrapper-' + size : 'ci-white-space-wrapper-md'}}">
+</view>

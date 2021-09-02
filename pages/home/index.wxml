@@ -1,0 +1,203 @@
+    <view>
+        <SearchBar maxLength="5" showCancelButton placeholder="请输入搜索内容"></SearchBar>
+        <FlexItem>
+            <view>1</view>
+        </FlexItem>
+        <FlexItem>
+            <view>2</view>
+        </FlexItem>
+        <FlexItem>
+            <view>3</view>
+        </FlexItem>
+        <WhiteSpace size="lg"></WhiteSpace>
+        <Pagination mode="button" current="3" total="5">
+            <view slot="prevText" class="">上一页</view>
+            <view slot="nextText" class="nextText">下一页</view>
+        </Pagination>
+        <SegmentedControl bindonChange="onMyEvent" customStyle="height: 40px; width: 250px" tintColor="#F56C6C" values="{{value}}"></SegmentedControl>
+        <NavBar bindonLeftClick="onBack">
+            <text slot="leftContent">你好</text>
+            NavBar
+            <view slot="rightContent">
+                <Popover visible="{{false}}" mask>
+                    <Icon type="more" color="#fff"/>
+                    <view class="overlay" slot="overlay">
+                        <PopoverItem disabled icon="eit" bindclick="clickItem">Scan</PopoverItem>
+                        <PopoverItem>Qrcode</PopoverItem>
+                        <PopoverItem>Help</PopoverItem>
+                    </view>
+                </Popover>
+            </view>
+        </NavBar>
+        <Drawer customStyle="height: 100px" position="top" visible="{{isShow}}">
+            <view class="list" wx:key="{{item}}" wx:for="{{[1, 2, 3, 4, 5]}}">nihao + {{item}}</view>
+        </Drawer>
+        <Menu height="500" multiSelect level="2" data="{{data2}}"></Menu>
+        <Tabs animated="{{animated}}" bindonTabClick="tabClick" tabs="{{tabs2}}">
+            <view slot="1">
+                Content of first tab
+            </view>
+            <view slot="2">
+                Content of second tab
+            </view>
+            <view slot="3">
+                Content of third tab
+            </view>
+            <view slot="4">
+                Content of 4 tab
+            </view>
+            <view slot="5">
+                Content of 5 tab
+            </view>
+        </Tabs>
+        <Stepper min="3" max="17" currentValue="5"></Stepper>
+        <List renderHeader="checkbox">
+            <ListItem extra="10:30" align="bottom" arrow="up" thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png" multipleLine>
+                Title
+                <ListItemBrief>subtitle</ListItemBrief>
+            </ListItem>
+            <ListItem  data-seed="logId">
+                <text class="text">Single line，long text will be hidden with ellipsis；</text>
+            </ListItem>
+            <ListItem wrap>Multiple line，long text will wrap；Long Text Long Text Long Text Long Text Long Text Long Text</ListItem>
+            <ListItem extra="extra content" multipleLine align="top" wrap>
+                Multiple line and long text will wrap. Long Text Long Text Long Text
+            </ListItem>
+            <ListItem extra="no arrow" align="top" arrow="up" wrap>
+                In rare cases, the text of right side will wrap in the single line with long text. long text long text long text
+            </ListItem>
+            <CheckboxItem Title="Barcelona" defaultChecked></CheckboxItem>
+            <CheckboxItem Title="Stuttgart" ></CheckboxItem>
+            <CheckboxItem Title="Paris" extra="extra content"></CheckboxItem>
+            <CheckboxItem Title="Liverpool" subtitle="Disable options"></CheckboxItem>
+        </List>
+        <List renderHeader="radio">
+            <RadioItem disabled="{{item.isDisabled}}" checked="{{item.isChecked}}" bindonChange="changeValue" currentValue="{{radioValue}}" wx:for="{{data1}}" wx:key="{{item.value}}" extra="{{item.extra}}" Title="{{item.label}}"></RadioItem>
+        </List>
+        <Accordion defaultActiveKey="2">
+            <Panel header="Title 1" key="1">
+              <List class="my-list">
+                <ListItem>content 1</ListItem>
+                <ListItem>content 2</ListItem>
+                <ListItem>content 3</ListItem>
+              </List>
+            </Panel>
+            <Panel header="Title 2" class="pad" key="2">
+              this is panel content2 or other
+            </Panel>
+            <Panel header="Title 3" class="pad" key="3">
+              text text text text text text text text
+            </Panel>
+        </Accordion>
+        <Tag disabled="true" text="Disabled"></Tag>
+        <Tag closable="true" text="Closeable"></Tag>
+        <Tag text="Small and Readonly" small="true"></Tag>
+        <!-- <TabBar>
+            <TabBarItem key="homepage" icon="homepage" current-icon="homepage_fill" title="Home"></TabBarItem>
+            <TabBarItem key="group" icon="group" current-icon="group_fill" title="Friends"></TabBarItem>
+            <TabBarItem key="remind" icon="remind" current-icon="remind_fill" count="3" title="Notice"></TabBarItem>
+            <TabBarItem key="mine" icon="mine" current-icon="mine_fill" dot title="My"></TabBarItem>
+        </TabBar> -->
+        <List renderHeader="Basic Style">
+            <ListItem extra="extra content" arrow="horizontal">
+                <Badge size="large" dot>
+                    <view style="width:26px;height:26px;background:#ddd"></view>
+                </Badge>
+                <view style="margin-left:12px;">Dot badge</view>
+            </ListItem>
+            <ListItem thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png" arrow="horizontal">
+                <view slot="extra">
+                    <Badge text="77" overflowCount="55"></Badge>
+                </view>
+                Content
+            </ListItem>
+            <ListItem>
+                <Badge hot text="促"></Badge>
+            </ListItem>
+        </List>
+        <WingBlank size="lg">
+          <WhiteSpace size="lg"/>
+          <Card>
+            <CardHeader thumb="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png">
+              <!-- <view slot="thumb"></view> -->
+              <text slot="extra">this is extra</text>
+              <text slot="title">This is title</text>
+            </CardHeader>
+            <CardBody>
+              <view>This is content of `Card`</view>
+            </CardBody>
+            <CardFooter content="footer content" extra="extra footer content">
+              <!-- <view slot="content">footer content</view>  
+              <view slot="extra">extra footer content</view> -->
+            </CardFooter>
+          </Card>
+        </WingBlank>
+        <WhiteSpace size="lg"/>
+        <Card full>
+          <CardHeader title="This is title" thumb="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png">
+            <view slot="extra">this is extra</view>
+          </CardHeader>
+            <CardBody>
+              <view>This is content of `Card`</view>
+            </CardBody>
+          <CardFooter content="footer content">
+            <view slot="extra">extra footer content</view>
+          </CardFooter>
+        </Card>
+        <Grid isCarousel carouselMaxRow="3" square="{{square}}" columnNum="3" data="{{gridData}}"></Grid>
+        <NoticeBar marqueeProps="{{marqueeProps}}">
+          Notice: The arrival time of incomes and transfers of Yu &#39;E Bao will be delayed during National Day.
+        </NoticeBar>
+        <NoticeBar mode="link">
+          Notice: The arrival time of incomes and transfers of Yu &#39;E Bao will be delayed during National Day.
+        </NoticeBar>
+        <NoticeBar iconSlot mode="closable">
+          <Icon type="success" color="rgb(247, 106, 36)" slot="icon"></Icon>
+          Customized icon.
+        </NoticeBar>
+        <NoticeBar>
+          <text slot="action">去看看</text>
+          Link demo for `actionText`.
+        </NoticeBar>
+        <WhiteSpace />
+        <Steps current="1" size="small">
+          <Step title="Finished" description="This is description"></Step>
+          <Step title="In Progress" description="This is description"></Step>
+          <Step title="Waiting" description="This is description"></Step>
+        </Steps>
+        <Steps current="1" direction="horizontal">
+          <Step title="Step 1" icon="add" />
+          <Step status="error" title="Step 2" icon="add" />
+          <Step title="Step 3" icon="add" />
+        </Steps>
+        <Steps>
+          <Step status="process" title="Finished" description="This is description" />
+          <Step status="error" title="Error" description="This is description" />
+          <Step title="Waiting" description="This is description" />
+        </Steps>
+        <ActivityIndicator size="large"></ActivityIndicator>
+        <Result message="所提交内容已成功完成验证" title="验证成功">
+            <Icon slot="img" size="208" color="#80848f" type="success"></Icon>
+        </Result>
+        <Result
+            message="已提交申请，等待银行处理"
+            title="等待处理"
+            imgUrl="https://gw.alipayobjects.com/zos/rmsportal/HWuSTipkjJRfTWekgTUG.svg"
+            buttonText="button"
+        ></Result>
+        <SwipeAction left="{{demo1Left}}" autoClose="{{isDisabled}}" right="{{demo1Right}}">
+            <ListItem extra="More" arrow="horizontal">Have left and right buttons</ListItem>
+        </SwipeAction>
+        <Range style="margin-left:15px;margin-right:15px" min="{{min}}" max="{{max}}" defaultValue="{{defaultValue}}"/>
+    </view>
+    <!-- <PullToRefresh id="ci-refresher" indicator="{{indicator}}" bind:refresh="onRefresh">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">文字组合列表</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text" wx:for="{{ items }}" wx:key="">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">{{ item.title }}</view>
+                    <view class="weui-media-box__desc">{{ item.content }}</view>
+                </view>
+            </view>
+        </view>
+    </PullToRefresh> -->

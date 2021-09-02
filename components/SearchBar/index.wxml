@@ -1,0 +1,13 @@
+<view class="ci-search-bar-wrapper">
+    <view class="ci-icon-wrapper">
+        <view class="ci-text-wrapper {{showText ? 'ci-hideText' : ''}}">
+            <Icon size="20" color="#80848f" type="search" />
+            <Icon wx:if="{{value !== ''}}" bindtap="deleteText" class="ci-delete-icon" size="20" color="#80848f" type="delete" />
+            <text wx:if="{{!showText}}">{{placeholder}}</text>
+        </view>
+        <input confirm-hold focus="{{autofocus}}" disabled="{{disabled}}" maxlength="{{maxLength}}" bindinput="changeText" placeholder-class="ci-placeholder-class" placeholder="{{placeholder}}" class="ci-search-text {{showText ? 'ci-showInput' : ''}}" bindfocus="changeFocus" bindblur="changeBlur" value="{{defaultValue ? defaultValue : value}}" type="text" />
+    </view>
+    <view wx:if="{{showText || showCancelButton}}" bindtap="hideText" class="ci-cancel-text-wrapper">
+        <text class="ci-cancel-text">{{cancelText}}</text>
+    </view>
+</view>

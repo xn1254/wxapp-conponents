@@ -1,0 +1,14 @@
+<view style="{{ style }}" bindtouchstart="bindtouchstart" bindtouchmove="bindtouchmove" bindtouchend="bindtouchend">
+    <view class="ci-refresher {{ className || 'hidden' }}">
+        <view class="ci-refresher__content {{ indicator ? 'ci-refresher__content--text' : '' }}">
+            <view class="ci-refresher__icon-pulling">
+                <text class="{{ pullingIcon || 'ci-refresher__icon--arrow-down' }}"></text>
+            </view>
+            <view class="ci-refresher__text-pulling">{{ showText }}</view>
+            <view class="ci-refresher__icon-refreshing">
+                <ActivityIndicator text="{{ indicator.release }}"></ActivityIndicator>
+            </view>
+        </view>
+    </view>
+    <slot></slot>
+</view>

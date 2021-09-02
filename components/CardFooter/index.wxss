@@ -1,0 +1,8 @@
+.ci-card__ft {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 28rpx;
+    color: #888;
+    padding: 0 30rpx;
+    justify-content: space-between
+  }

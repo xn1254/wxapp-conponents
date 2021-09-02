@@ -1,0 +1,21 @@
+<view class="ci-class ci-result">
+    <view class="ci-result__hd">
+        <view class="ci-result__icon">
+            <image wx:if="{{ imgUrl }}" src="{{ imgUrl }}"></image>
+            <slot name="img"></slot>
+        </view>
+    </view>
+    <view class="ci-result__bd">
+        <view>
+            <view wx:if="{{ title }}" class="ci-result__title">{{ title }}</view>
+            <slot name="title"></slot>
+        </view>
+        <view>
+            <view wx:if="{{ message }}" class="ci-result__desc">{{ message }}</view>
+            <slot name="message"></slot>
+        </view>
+        <view wx:if="{{ buttonText }}" class="ci-result__buttons">
+            <button type="{{ buttonType }}" bindTap="onClick">{{ buttonText }}</button>
+        </view>
+    </view>
+</view>

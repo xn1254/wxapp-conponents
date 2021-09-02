@@ -1,0 +1,3 @@
+<view class="ci-flex-item-wrapper">
+    <slot ></slot>
+</view>

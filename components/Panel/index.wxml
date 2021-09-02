@@ -1,0 +1,9 @@
+<view id="{{name}}" class="ci-class ci-collapse-item ">
+    <view class="ci-collapse-item-title-wrap" bindtap="trigger">
+        <text class="ci-collapse-item-title ci-class-title">{{header}}</text>
+        <Icon size="16" type="enter" i-class="{{ showContent ? 'ci-collapse-item-arrow-show' : 'ci-collapse-item-arrow' }}"/>
+    </view>
+    <view class="ci-collapse-item-content {{showContent}}  ci-class-content">
+        <slot></slot>
+    </view>
+</view>

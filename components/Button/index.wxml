@@ -1,0 +1,5 @@
+<view class="ci-button-container" bindtap="click">
+    <view class="ci-button {{disabled ? 'ci-button-disabled' : ''}} {{'ci-button'+size}} {{type ? 'ci-button' + type : 'ci-button-default'}}">
+      <slot></slot>
+    </view>
+</view>

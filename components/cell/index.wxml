@@ -1,0 +1,16 @@
+<view bindtap="handleTap" class="ci-class ci-cell {{ isLastCell ? 'ci-cell-last' : '' }} {{ isLink ? 'ci-cell-access' : '' }}">
+    <view class="ci-cell-icon">
+        <slot name="icon"></slot>
+    </view>
+    <view class="ci-cell-bd">
+        <view wx:if="{{ title }}" class="ci-cell-text">{{ title }}</view>
+        <view wx:if="{{ label }}" class="ci-cell-desc">{{ label }}</view>
+        <slot></slot>
+    </view>
+    <view catchtap="navigateTo" class="ci-cell-ft">
+        <block wx:if="{{value}}">{{ value }}</block>
+        <block wx:else>
+            <slot name="footer"></slot>
+        </block>
+    </view>
+</view>

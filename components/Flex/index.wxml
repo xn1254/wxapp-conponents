@@ -1,0 +1,4 @@
+<view class="ci-flex-wrapper {{direction ? 'ci-flex-direction-' + direction : ''}} {{wrap ? 'ci-flex-wrap-' + wrap : ''}} {{justify ? 'ci-flex-justify-' + justify : ''}} {{align ? 'ci-flex-align-' + align : ''}} {{alignContent ? 'ci-flex-alignContent-' + alignContent : ''}}"
+>
+	<slot ></slot>
+</view>

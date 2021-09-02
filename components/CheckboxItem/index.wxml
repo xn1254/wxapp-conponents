@@ -1,0 +1,6 @@
+<view hover-class="none" hover-stop-propagation="false">
+    <ListItem hideActive bindonClick="checkedItem" extra="{{extra}}" arrow="{{arrow}}" align="{{align}}" multipleLine="{{multipleLine}}" wrap="{{wrap}}">
+        <menu-checkbox bindchange="checkedItem" disabled="{{disabled}}" checked="{{checked ? checked : defaultChecked}}" value="{{Title}}"></menu-checkbox>
+        <!-- <ListItemBrief>{{subtitle}}</ListItemBrief> -->
+    </ListItem>
+</view>

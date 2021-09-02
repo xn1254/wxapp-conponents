@@ -1,0 +1,59 @@
+.ci-search-bar-wrapper{
+    display: flex;
+    padding: 16rpx;
+    background: #efeff4;
+    height: 56rpx;
+    overflow: hidden;
+    position: relative;
+}
+.ci-icon-wrapper{
+    flex: 1;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: #fff;
+}
+.ci-text-wrapper.ci-hideText{
+    justify-content: space-between;
+    margin-left: 30rpx;
+    transition: margin-left .3s;
+    transition-delay: .1s;
+}
+.ci-delete-icon{
+    margin-right: 40rpx
+}
+.ci-placeholder-class{
+    color: #80848f;
+    font-size: 16px;
+}
+.ci-cancel-text-wrapper{
+    font-size: 16px;
+    color: #108ee9;
+    margin-left: 10rpx;
+    display: flex;
+    align-items: center;
+}
+.ci-search-text{
+    padding: 6rpx;
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+}
+.ci-showInput{
+    opacity: 1;
+    margin-left: 80rpx;
+    width: 80%;
+    transition: margin-left .3s, opacity .3s;
+    transition-delay: .1s;
+}
+.ci-text-wrapper{
+    width: 100%;
+    color: #80848f;
+    font-size: 16px;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center
+}

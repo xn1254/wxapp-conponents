@@ -1,0 +1,4 @@
+<view class="ci-class ci-collapse" bindChange="change" bindcollapse="clickfn">
+  <slot></slot>
+</view>
+

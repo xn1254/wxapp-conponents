@@ -1,0 +1,49 @@
+.ci-drawer {
+  visibility: hidden;
+}
+.ci-drawer-show {
+  visibility: visible;
+}
+.ci-drawer-show .ci-drawer-mask {
+  display: block;
+  opacity: 1;
+}
+.ci-drawer-show .ci-drawer-container {
+  opacity: 1;
+}
+.ci-drawer-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+.ci-drawer-container {
+  background: #ffffff;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  opacity: 0;
+}
+.ci-drawer-left .ci-drawer-container {
+  top: 0;
+  width: 50%;
+  min-height: 100%;
+}
+.ci-drawer-right .ci-drawer-container {
+  right: 0;
+  width: 50%;
+  min-height: 100%;
+}
+.ci-drawer-top .ci-drawer-container {
+  top: 0;
+  width: 100%;
+}
+.ci-drawer-bottom .ci-drawer-container {
+  bottom: 0;
+  width: 100%;
+}

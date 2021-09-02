@@ -1,0 +1,9 @@
+<view class="ci-popover-item {{disabled ? 'ci-popover-item-disabled' : ''}}" bindtap="clickAction">
+  <view class="ci-popover-item-icon" wx:if="{{isIcon && icon}}">
+    <Icon size="18" type="{{icon}}"></Icon>
+  </view>
+  <image class="ci-popover-item-icon" mode="aspectFit" wx:if="{{!isIcon && icon}}" src="{{icon}}" style="width: 36rpx; height: 36rpx"></image>
+  <view class="ci-popover-item-content">
+    <slot></slot>
+  </view>
+</view>

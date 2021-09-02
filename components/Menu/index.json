@@ -1,0 +1,10 @@
+{
+    "component": true,
+    "usingComponents":
+    {
+        "i-radio-group": "../menu-radio-group/index",
+        "i-radio": "../menu-radio/index",
+        "i-checkbox-group": "../menu-checkbox-group/index",
+        "i-checkbox": "../menu-checkbox/index"
+    }
+  }

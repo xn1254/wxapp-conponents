@@ -1,0 +1,15 @@
+<view class="ci-swipe">
+    <view class="ci-swipe-actions ci-swipe-actions-left" bindtap="closeSwipeLeft">
+      <view class="ci-swipe-btn" wx:for="{{ left }}" wx:key="index">
+        <text class="ci-swipe-btn-text">{{ btn.text ? btn.text : 'Click' }}</text>
+      </view>
+    </view>
+    <view class="ci-swipe-actions ci-swipe-actions-right" bindtap="closeSwipeRight">
+      <view class="ci-swipe-btn" wx:for="{{right}}" wx:key="index">
+        <text class="ci-swipe-btn-text">{{ item.text ? item.text : 'Click' }}</text>
+      </view>
+    </view>
+    <view class="ci-swipe-content" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{txtStyle}}">
+      <slot></slot>
+    </view>
+  </view>

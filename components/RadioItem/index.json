@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "ListItem": "../ListItem/index",
+        "menu-radio": "../menu-radio/index"
+    }
+}

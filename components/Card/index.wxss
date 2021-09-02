@@ -1,0 +1,33 @@
+.ci-card {
+    position: relative;
+    min-height: 192rpx;
+    padding-bottom: 12rpx;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+}
+.ci-card--bordered:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 0 solid #d9d9d9;
+    border-radius: 20rpx;
+    border-top-width: 2rpx;
+    border-right-width: 2rpx;
+    border-bottom-width: 2rpx;
+    border-left-width: 2rpx;
+  }
+  .ci-card--full:before {
+    border-radius: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+  }

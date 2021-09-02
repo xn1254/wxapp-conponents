@@ -1,0 +1,10 @@
+<view class="{{toast ? 'ci-activity-indicator-toast' : 'ci-activity-indicator'}}" wx:if="{{animating}}">
+      <view wx:if="{{toast}}" class="ci-content-toast">
+        <view class="{{size === 'large' ? 'ci-spinnerClass-large' : ''}} ci-spinnerClass" aria-hidden="true"></view>
+        <view class="ci-text-toast">{{text}}</view>
+      </view>
+      <view class="ci-content" wx:else>
+        <view class="ci-spinnerClass {{size === 'large' ? 'ci-spinnerClass-large' : ''}}" aria-hidden="true"></view>
+        <view class="ci-text">{{text}}</view>
+      </view>
+  </view>

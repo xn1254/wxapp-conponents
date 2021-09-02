@@ -1,0 +1,10 @@
+.ci-list-item-brief{
+    color: #888;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 12rpx;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,3 @@
+<view class="ci-class ci-cell-group">
+    <slot></slot>
+</view>

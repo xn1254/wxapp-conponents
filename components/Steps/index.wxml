@@ -1,0 +1,3 @@
+<view class="ci-class ci-steps">
+    <slot></slot>
+</view>

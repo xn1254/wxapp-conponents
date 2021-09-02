@@ -1,0 +1,34 @@
+.ci-tag {
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 30rpx;
+  border-radius: 6rpx;
+  background: #fff;
+  color: #888;
+  font-size: 14px;
+  vertical-align: middle;
+  border: 1rpx solid #dddee1;
+  position: relative
+}
+.ci-tag-none {
+  border-color: #fff;
+}
+.ci-tag-default {
+  border-color: #dddee1;
+  background: #e9eaec;
+}
+.ci-tag-disable{
+  background: #ddd
+}
+.ci-tag-small{
+  padding: 0;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding: 0 10rpx
+}
+.icon{
+  position: absolute;
+  top: -20rpx;
+  left: -20rpx;
+}

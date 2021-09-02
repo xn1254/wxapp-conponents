@@ -1,0 +1,17 @@
+<view class="ci-pagination-wrapper">
+    <view class="ci-pagination-button">
+        <button disabled="{{prevIsDisabled}}" bindtap="delete" wx:if="{{mode === 'button'}}">
+            <slot name="prevText"></slot>
+        </button>
+        <view wx:if="{{mode === 'number' || mode === 'button'}}" class="ci-text-wrapper">
+            <text wx:if="{{!simple}}" class="ci-current-text">{{current}}</text>
+            <text wx:if="{{!simple}}" class="ci-total-text">/{{total}}</text>
+        </view>
+        <button disabled="{{nextIsDisabled}}" bindtap="add" wx:if="{{mode === 'button'}}">
+            <slot name="nextText"></slot>
+        </button>
+    </view>
+    <view wx:if="{{mode === 'pointer'}}" class="ci-pagination-pointer">
+       <view wx:key="{{index}}" wx:for="{{pointer}}" class="ci-pointer {{index + 1 === current ? 'pointer-isChecked' : ''}}"></view> 
+    </view>
+</view>

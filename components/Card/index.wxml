@@ -1,0 +1,3 @@
+<view class="ci-class ci-card ci-card--bordered {{ full ? 'ci-card--full' : '' }}">
+    <slot></slot>
+</view>

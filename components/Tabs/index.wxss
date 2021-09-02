@@ -1,0 +1,69 @@
+.ci-tabs {
+  display: flex;
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-box-align: center;
+  background: #fff;
+}
+.ci-tabs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e9eaec;
+  border-bottom-width: 1px;
+}
+.ci-tabs-scroll {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.ci-tabs-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.ci-tabs-wrapper{
+  flex: 1;
+  text-align: center;
+  font-size: 15px
+}
+.ci-scroll-tabs-wrapper{
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px
+}
+.ci-tab-checked{
+  color: #108ee9;
+  border-bottom: 4rpx solid #108ee9;
+}
+.ci-tabs-content-wrapper{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.ci-tabs-content-container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  font-size: 0;
+}
+
+.ci-tabs-content-item{
+  display: inline-block;
+  height: 300px;
+}

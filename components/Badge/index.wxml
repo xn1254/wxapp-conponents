@@ -1,0 +1,7 @@
+<view class="ci-class ci-badge">
+    <slot></slot>
+    <view wx:if="{{text && text !== '0'}}" class="ci-badge-text" hover-class="none" hover-stop-propagation="false">
+        {{finalCount}}
+    </view>
+    <view class="ci-badge-dot {{size === 'large' ? 'ci-badge-dot-large' : ''}}" wx:if="{{ dot }}"></view>
+</view>

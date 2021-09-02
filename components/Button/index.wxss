@@ -1,0 +1,18 @@
+.ci-button-container{
+  display: block;
+  outline: 0 none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+  font-size: 36rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  white-space: nowrap;
+}
+.ci-button-container:active{
+    background-color: rgb(221, 221, 221);
+}

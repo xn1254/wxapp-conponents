@@ -1,0 +1,23 @@
+<scroll-view wx:if="{{ tabs.length > 5 }}" scroll-x class="ci-tabs ci-tabs-scroll" scroll-left="{{scrollLeft}}">
+    <view data-data="{{index}}" class="ci-scroll-tabs-wrapper {{index === initialPage ? 'ci-tab-checked' : ''}}" bindtap="handleClickItem" wx:key="{{index}}" wx:for="{{tabs}}">{{item.title}}</view>
+</scroll-view>
+<view wx:if="{{tabs.length <= 5 && tabBarPosition === 'top'}}" class="ci-tabs">
+    <view data-data="{{index}}" class="ci-tabs-wrapper {{index === initialPage ? 'ci-tab-checked' : ''}}" bindtap="handleClickItem" wx:key="{{index}}" wx:for="{{tabs}}">{{item.title}}</view>
+</view>
+<!-- <swiper bindchange="swiperChange" data-data="{{selectedIndex}}" duration="{{isAnimated}}" current='{{selectedIndex}}'>
+    <block wx:key="{{index}}" wx:for="{{tabs}}">
+        <swiper-item>
+            <slot name="{{item.sub}}"></slot>
+        </swiper-item>
+    </block>
+</swiper> -->
+<view class="ci-tabs-content-wrapper" style="width: {{wrapperWidth}}px" hover-class="none" hover-stop-propagation="false">
+    <view class="ci-tabs-content-container" style="width: {{containerWidth}}%; left: {{containerLeft}}px" hover-class="none" hover-stop-propagation="false">
+        <view class="ci-tabs-content-item" style="width: {{itemWidth}}px" wx:key="{{index}}" wx:for="{{tabs}}" hover-class="none" hover-stop-propagation="false">
+            <slot name="{{item.sub}}"></slot>
+        </view>
+    </view>
+</view>
+<view wx:if="{{tabs.length <= 5 && tabBarPosition === 'bottom'}}" class="ci-tabs">
+    <view data-data="{{index}}" class="ci-tabs-wrapper {{index === initialPage ? 'ci-tab-checked' : ''}}" bindtap="handleClickItem" wx:key="{{index}}" wx:for="{{tabs}}">{{item.title}}</view>
+</view>

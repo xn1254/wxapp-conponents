@@ -1,0 +1,27 @@
+.ci-collapse-item {
+  padding: 4rpx 16rpx;
+  border-top: 2rpx solid #dddee1;
+}
+.ci-collapse-item-title {
+  vertical-align: middle;
+}
+.ci-collapse-item-title-wrap {
+  padding: 4rpx 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.ci-collapse-item-content {
+  padding: 12rpx;
+  display: none;
+}
+.ci-collapse-item-show-content {
+  display: block;
+}
+.ci-collapse-item-arrow {
+  transition: transform 0.2s ease-in-out;
+}
+.ci-collapse-item-arrow-show {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(90deg);
+}

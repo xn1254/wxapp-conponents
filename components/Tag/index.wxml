@@ -1,0 +1,4 @@
+<view wx:if="{{isShow}}" class="ci-class ci-tag {{small ? 'ci-tag-small' : ''}} {{disabled ? 'ci-tag-disable' : ''}}">
+    <view>{{text}}</view>
+    <Icon bindtap="tapTag" wx:if="{{closable}}" class="icon" size="20" color="#bbb" type="delete_fill" />
+</view>

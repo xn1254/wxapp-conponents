@@ -1,0 +1,20 @@
+<view class="ci-list-item {{ hideActive ? 'ci-hide-active' : '' }} {{ 'ci-list-item-' + alignDrection }}" bindtap="click">
+    <view class="ci-left-wrapper">
+        <view class="ci-thumb-wrapper" wx:if="{{thumb}}">
+            <image style="width:22px; height:22px" src="{{thumb}}" />
+            <slot name="thumb"></slot>
+        </view>
+        <view class="{{(multipleLine || wrap) ? '' : 'ci-content-wrapper'}}">
+            <slot></slot>
+        </view>
+    </view>
+    <view class="ci-right-wrapper">
+        <view class="ci-extra">
+            <text wx:if="{{extra ? true : false}}">{{extra}}</text>
+            <slot name="extra"></slot>
+        </view>
+        <view class="ci-arrow {{hideArrow ? 'ci-hide-arrow' : ''}}">
+            <Icon size="20" color="#888" type="{{arrowDrection}}" />
+        </view>
+    </view>
+</view>

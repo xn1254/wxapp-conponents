@@ -1,0 +1,21 @@
+<view class="ci-class ci-notice-bar" wx:if="{{ visible }}" bindtap="onClick">
+    <view class="ci-notice-bar__hd" wx:if="{{icon !== 'null'}}">
+        <Icon color="rgb(247, 106, 36)" type="systemprompt" wx:if="{{!icon}}"/>
+        <image class="ci-notice-bar__icon" src="{{ icon }}" wx:if="{{ icon && icon !== 'null' }}" />
+    </view>
+    <view class="ci-notice-bar__bd">
+        <view class="ci-notice-bar__marquee-container">
+            <view class="ci-notice-bar__marquee" style="transform: translate3d({{ -animatedWidth + 'px' }}, 0px, 0px)">
+                <block wx:if="{{ content }}">{{ content }}</block>
+                <slot></slot>
+            </view>
+        </view>
+    </view>
+    <view class="ci-notice-bar__ft" catchtap="onAction">
+        <Icon color="rgb(247, 106, 36)" type="close" wx:if="{{mode === 'closable'}}"/>
+        <Icon color="rgb(247, 106, 36)" type="enter" wx:elif="{{mode === 'link'}}"/>
+        <block wx:else>
+            <slot name="action"></slot>
+        </block>
+    </view>
+</view>

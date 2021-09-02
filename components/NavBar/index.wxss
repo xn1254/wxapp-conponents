@@ -1,0 +1,26 @@
+.ci-navbar-wrapper{
+    display: flex;
+    min-height: 90rpx;
+    padding-left: 40rpx;
+    padding-right: 40rpx
+}
+.ci-navbar-wrapper-light{
+    color: #108ee9;
+}
+.ci-navbar-wrapper-dark{
+    color: #ffffff;
+    background: #108ee9
+}
+.ci-content{
+    line-height: 90rpx;
+    flex: 1
+}
+.ci-navbar-content{
+    text-align: center;
+}
+.ci-navbar-content-light{
+    color: #000
+}
+.ci-navbar-right{
+    text-align: right;
+}

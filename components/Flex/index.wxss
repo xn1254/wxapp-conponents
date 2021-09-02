@@ -1,0 +1,72 @@
+.ci-flex-wrapper{
+    display: flex;
+}
+.ci-flex-direction-row{
+    flex-direction: row;
+}
+.ci-flex-direction-row-reverse{
+    flex-direction: row-reverse;
+}
+.ci-flex-direction-column{
+    flex-direction: column;
+}
+.ci-flex-direction-column-reverse{
+    flex-direction: column-reverse;
+}
+.ci-flex-wrap-nowrap{
+    flex-wrap: nowrap;
+}
+.ci-flex-wrap-wrap{
+    flex-wrap: wrap;
+}
+.ci-flex-wrap-wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+.ci-flex-justify-start{
+    justify-content: flex-start;  
+}
+.ci-flex-justify-end{
+    justify-content: flex-end;  
+}
+.ci-flex-justify-between{
+    justify-content: space-between;  
+}
+.ci-flex-justify-center{
+    justify-content: center;  
+}
+.ci-flex-justify-around{
+    justify-content: space-around;  
+}
+.ci-flex-align-start{
+    align-items: flex-start;
+}
+.ci-flex-align-end{
+    align-items: flex-end;
+}
+.ci-flex-align-center{
+    align-items: center;
+}
+.ci-flex-align-baseline {
+    align-items: baseline;
+}
+.ci-flex-align-stretch{
+    align-items: stretch;
+}
+.ci-flex-alignContent-start{
+    align-content: flex-start;
+}
+.ci-flex-alignContent-end{
+    align-content: flex-end;
+}
+.ci-flex-alignContent-center {
+    align-content: center;
+}
+.ci-flex-alignContent-between{
+    align-content: space-between
+}
+.ci-flex-alignContent-around{
+    align-content: space-around
+}
+.ci-flex-alignContent-stretch{
+    align-content: stretch
+}

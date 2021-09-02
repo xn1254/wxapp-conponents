@@ -1,0 +1,13 @@
+<view class="ci-class ci-tab-bar {{ fixed ? 'ci-tab-bar-fixed' : '' }}">
+    <slot></slot>
+</view>
+<!-- <swiper bindchange="swiperChange" data-data="{{selectedIndex}}" duration="{{isAnimated}}" current='{{selectedIndex}}'>
+    <block wx:key="{{index}}" wx:for="{{tabs}}">
+        <swiper-item>
+            <slot name="{{item.sub}}"></slot>
+        </swiper-item>
+    </block>
+</swiper>
+<view wx:if="{{tabs.length <= 5 && tabBarPosition === 'bottom'}}" class="ci-tabs">
+    <view data-data="{{index}}" class="tabs-wrapper {{index === initialPage ? 'tab-checked' : ''}}" bindtap="handleClickItem" wx:key="{{index}}" wx:for="{{tabs}}">{{item.title}}</view>
+</view> -->

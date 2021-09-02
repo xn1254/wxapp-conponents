@@ -1,0 +1,6 @@
+<view class="ci-drawer {{ visible ? 'ci-drawer-show' : '' }} {{ 'ci-drawer-' + position }}">
+    <view class="ci-drawer-mask" bindtap="handleMaskClick"></view>
+    <scroll-view style="{{customStyle}}" scroll-y class="ci-drawer-container">
+        <slot></slot>
+    </scroll-view>
+</view>

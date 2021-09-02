@@ -1,0 +1,3 @@
+<view class="ci-class ci-tab-bar-item">
+    <slot></slot>
+</view>
